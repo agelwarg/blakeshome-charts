@@ -3,7 +3,7 @@ name: Release Charts
 on:
   push:
     branches:
-      - master
+      - allow-host-port-exposure-7.8.0-build
     paths:
       - 'charts/**'
       - '!charts/**/README.md'
@@ -30,6 +30,6 @@ jobs:
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.2.1
         with:
-          charts_repo_url: https://blakeblackshear.github.io/blakeshome-charts
+          charts_repo_url: https://agelwarg.github.io/blakeshome-charts
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
